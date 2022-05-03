@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KXUrgXlkVFgJHGQsBU2HmNNG0CavGDIvBBB1LLGi9ASmTkdpex6zVs3yThp+O+FnFzo8P58CXfskWYzn6JP3lw==",
+  "dgSpecHash": "n/5OVX6wRsx/RxOuYayYBwm2w5gjhtbptD36myVRLYd3xeZ8HoasOx2X+bsZvTA5Z94Q8vxEXv9w8f7VXQzSnw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hhasa\\Desktop\\E-Ticaret\\BulkyBook\\BusinessLayer\\BusinessLayer.csproj",
+  "projectFilePath": "C:\\Users\\hhasa\\source\\repos\\BulkyBook\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hhasa\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\hhasa\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hhasa\\Desktop\\E-Ticaret\\BulkyBook\\DataAccessLayer\\DataAccessLayer.csproj": {}
+    "C:\\Users\\hhasa\\source\\repos\\BulkyBook\\DataAccessLayer\\DataAccessLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hhasa\\Desktop\\E-Ticaret\\BulkyBook\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\hhasa\\source\\repos\\BulkyBook\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hhasa\\Desktop\\E-Ticaret\\BulkyBook\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\hhasa\\source\\repos\\BulkyBook\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\hhasa\\Desktop\\E-Ticaret\\BulkyBook\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectPath": "C:\\Users\\hhasa\\source\\repos\\BulkyBook\\DataAccessLayer\\DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\hhasa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hhasa\\Desktop\\E-Ticaret\\BulkyBook\\DataAccessLayer\\obj\\",
+        "outputPath": "C:\\Users\\hhasa\\source\\repos\\BulkyBook\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -34,8 +34,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\hhasa\\Desktop\\E-Ticaret\\BulkyBook\\EntityLayer\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\hhasa\\Desktop\\E-Ticaret\\BulkyBook\\EntityLayer\\EntityLayer.csproj"
+              "C:\\Users\\hhasa\\source\\repos\\BulkyBook\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\hhasa\\source\\repos\\BulkyBook\\EntityLayer\\EntityLayer.csproj"
               }
             }
           }
@@ -50,6 +50,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.4, )"
@@ -84,14 +88,14 @@
         }
       }
     },
-    "C:\\Users\\hhasa\\Desktop\\E-Ticaret\\BulkyBook\\EntityLayer\\EntityLayer.csproj": {
+    "C:\\Users\\hhasa\\source\\repos\\BulkyBook\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hhasa\\Desktop\\E-Ticaret\\BulkyBook\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\hhasa\\source\\repos\\BulkyBook\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\hhasa\\Desktop\\E-Ticaret\\BulkyBook\\EntityLayer\\EntityLayer.csproj",
+        "projectPath": "C:\\Users\\hhasa\\source\\repos\\BulkyBook\\EntityLayer\\EntityLayer.csproj",
         "packagesPath": "C:\\Users\\hhasa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hhasa\\Desktop\\E-Ticaret\\BulkyBook\\EntityLayer\\obj\\",
+        "outputPath": "C:\\Users\\hhasa\\source\\repos\\BulkyBook\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -125,6 +129,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.ViewFeatures": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

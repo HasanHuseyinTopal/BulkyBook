@@ -1,0 +1,27 @@
+﻿@model EntityLayer.Concrete.Cover
+@{
+    ViewData["Title"] = "CoverUpdate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<form asp-controller="Cover" asp-action="CoverUpdate" method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Update Cover</h2>
+            <hr />
+        </div>
+        <div class=" mb-3">
+            <input asp-for="CoverID" type="hidden" class="form-control" />
+            <label asp-for="CoverName">Category Name</label>
+            <input asp-for="CoverName" class="form-control" placeholder="Name" autocomplete="off" />
+            <span asp-validation-for="CoverName" class="text-danger"></span>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+        <a class="btn btn-secondary" href="/Admin/Cover/GetAllCovers">Back To List</a>
+    </div>
+</form>
+
+@section scripts{
+    @{
+    <partial name="_ValidationScriptsPartial" />
+    }
+}

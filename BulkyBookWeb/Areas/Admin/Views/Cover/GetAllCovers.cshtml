@@ -1,0 +1,31 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Cover>
+@{
+    ViewData["Title"] = "GetAllCovers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container p-3">
+    <div class="row p-3">
+        <div style="display:flex; justify-content:center" class="col-6">
+            <h2 class="m-auto">Cover Type</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a style="border-radius:25px" class="btn btn-primary btn-lg" asp-controller="Cover" asp-action="CoverAdd"><i class="bi bi-plus-circle"> &nbsp Create New Cover</i></a>
+        </div>
+    </div>
+        <table class="table table-bordered mt-4">
+            <tr>
+                <th>Cover Type Name</th>
+                <th style="width:200px">Update</th>
+                <th style="width:200px">Delete</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.CoverName</td>
+                    <td><a class="text-decoration-none" asp-action="CoverUpdate" asp-controller="Cover" asp-route-id="@item.CoverID"><i class="bi bi-pencil-square"> &nbsp Update</i></a></td>
+                    <td><a class="text-decoration-none" asp-action="CoverDelete" asp-controller="Cover" asp-route-id="@item.CoverID"> <i class="bi bi-trash3-fill text-danger"> &nbsp Delete</i></a></td>
+                </tr>
+            }
+        </table>
+</div>

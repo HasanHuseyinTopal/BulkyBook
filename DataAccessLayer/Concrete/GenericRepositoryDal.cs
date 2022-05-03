@@ -1,50 +1,56 @@
 ﻿using DataAccessLayer.Abstract;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccessLayer.Concrete
 {
-    public class GenericRepositoryDal<TEntity,TContext> : IGenericRepositoryDal<TEntity> where TEntity : class where TContext : DbContext
+    public class GenericRepositoryDal<TEntity, TContext> : IGenericRepositoryDal<TEntity> where TEntity : class,new() where TContext : DbContext
     {
-        private readonly TContext context;
-        public GenericRepositoryDal(TContext _context)
+        private ApplicationDbContext _context;
+        private DbSet<TEntity> dbSet;
+
+        public GenericRepositoryDal(ApplicationDbContext context)
         {
-            context = _context;
+            _context = context;
+            dbSet = _context.Set<TEntity>();
         }
         public void Add(TEntity Entity)
         {
-                context.Entry(Entity).State = EntityState.Added;
-                context.SaveChanges();
+        dbSet.Add(Entity);
         }
         public void Update(TEntity Entity)
         {
-                context.Entry(Entity).State = EntityState.Modified;
-                context.SaveChanges();
+            dbSet.Update(Entity);
+     
         }
         public void Delete(TEntity Entity)
         {
-                context.Entry(Entity).State = EntityState.Deleted;
-                context.SaveChanges();
+            dbSet.Remove(Entity);
+          
+        }
+        public void DeleteRange(IEnumerable<TEntity> EntityList)
+        {
+            dbSet.RemoveRange(EntityList);
         }
         public TEntity GetByID(Expression<Func<TEntity, bool>> filter)
         {
-                return context.Set<TEntity>().FirstOrDefault(filter);
+            IQueryable<TEntity> query = dbSet;
+            return query.FirstOrDefault(filter);
         }
-        public IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>> filter=null)
+        public IEnumerable<TEntity> GetAll(Expression<Func<TEntity, bool>> filter = null)
         {
-                if (filter==null)
-                {
-                return context.Set<TEntity>().AsQueryable();
-                }
-                else
-                {
-                return context.Set<TEntity>().Where(filter).AsQueryable();
-                }
+            if (filter == null)
+            {
+                IQueryable<TEntity> query = dbSet;
+                return query.ToList();
+            }
+            else
+            {
+                IQueryable<TEntity> query = dbSet;
+                return query.Where(filter).ToList();
+            }
         }
 
+       
     }
 }

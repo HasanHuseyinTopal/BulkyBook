@@ -14,5 +14,6 @@ namespace DataAccessLayer.Concrete
         public CategoryDal(ApplicationDbContext _context) : base(_context)
         {
         }
+
     }
 }

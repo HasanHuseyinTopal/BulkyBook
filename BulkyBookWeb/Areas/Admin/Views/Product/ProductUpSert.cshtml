@@ -1,0 +1,90 @@
+﻿@model EntityLayer.ViewModels.ProductViewModel
+
+@{
+    ViewData["Title"] = "ProductUpSert";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<form asp-controller="Product" asp-action="ProductUpSert" enctype="multipart/form-data">
+  <div class="row">
+       <div class="col-10">
+        <div class="border row p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">@(Model.product.ProductID!=0?"Update Product":"Create Product")</h2>
+            <hr />
+        </div>
+        <input type="hidden" asp-for="product.ProductID" />
+        <input type="hidden" asp-for="product.ImageUrl" />
+        <div class=" mb-3">
+            <label asp-for="product.Title">Tittle</label>
+            <input asp-for="product.Title" class="form-control" placeholder="Tittle" autocomplete="off" />
+            <span asp-validation-for="product.Title" class="text-danger"></span>
+        </div>
+        <div class=" mb-3">
+            <label asp-for="product.ProductDescription">Description</label>
+            <textarea asp-for="product.ProductDescription" class="form-control" rows="3" placeholder="Description" autocomplete="off"></textarea>
+            <span asp-validation-for="product.ProductDescription" class="text-danger"></span>
+        </div>
+        <div class=" mb-3 col-6">
+            <label asp-for="product.ISBN">ISBN</label>
+            <input asp-for="product.ISBN" class="form-control" placeholder="ISBN" autocomplete="off" />
+            <span asp-validation-for="product.ISBN" class="text-danger"></span>
+        </div>
+        <div class=" mb-3 col-6">
+            <label asp-for="product.Author">Author</label>
+            <input asp-for="product.Author" class="form-control" placeholder="Author" autocomplete="off" />
+            <span asp-validation-for="product.Author" class="text-danger"></span>
+        </div>
+        <div class=" mb-3 col-6">
+            <label asp-for="product.Price">Price</label>
+            <input asp-for="product.Price" class="form-control" placeholder="Price" autocomplete="off" />
+            <span asp-validation-for="product.Price" class="text-danger"></span>
+        </div>
+        <div class=" mb-3 col-6">
+            <label asp-for="product.ImageUrl">Image</label>
+            <input type="file" name="file" id="uploadBox" class="form-control" />
+        </div>
+        <div class="mb-3 ">
+            <label asp-for=product.CategoryID>Category Name</label>
+            <select asp-for="product.CategoryID" asp-items="@Model.CategoryList" class="form-select">
+                <option disabled selected>--Select Category--</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label asp-for=product.CategoryID>Category Name</label>
+            <select asp-for="product.CoverID" asp-items="@Model.CoverList" class="form-select">
+                <option disabled selected>--Select Cover Type--</option>
+            </select>
+        </div>
+        <div class="col p-3">
+            <button class="btn btn-primary" onclick="Javascript : return checkImage()" type="submit">Submit</button>
+            <a class="btn btn-secondary" href="/Admin/Product/GetAllProducts">Back To List</a>
+        </div>
+    </div>
+   </div>
+   <div class="col-2 mt-4">
+       <div style = " border:5px solid wheat; border-radius: 10px">
+            <img  src="@Model.product.ImageUrl" style="width : 100%; height : 100%"/>
+       </div>
+    </div>
+  </div>
+</form>
+
+@section scripts{
+    @{
+    <partial name="_ValidationScriptsPartial" />
+    }
+<script>
+        function checkImage(){
+            if(document.getElementById("uploadBox").value=="")
+            {
+                        Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'You Must Upload A Image',
+            })
+            return false;
+            }
+            return true;
+        }
+</script>
+}

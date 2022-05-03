@@ -1,5 +1,4 @@
-﻿using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace EntityLayer.Concrete
 {
@@ -8,13 +7,14 @@ namespace EntityLayer.Concrete
         [Key]
         public int CategoryID { get; set; }
         [Required]
-        [DisplayName("Name")]
+        [Display(Name ="Name")]
+        [RegularExpression(@"^[a-zA-Z]+$",ErrorMessage = "The name must contain only letters")]
         public string? CategoryName { get; set; }
         [Required]
-        [DisplayName("Display Order")]
+        [Display(Name ="Display Order")]
         [Range(1,100)]
         public int CategoryDisplayOrder { get; set; }
-        [DisplayName("Date")]
+        [Display(Name="Date")]
         public DateTime CategoryCreatedDate { get; set; } = DateTime.Now;
     }
 }

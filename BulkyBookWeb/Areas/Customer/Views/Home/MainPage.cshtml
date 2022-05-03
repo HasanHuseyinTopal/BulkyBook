@@ -1,0 +1,26 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Product>
+
+<div class="row pb-3">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-3 col-md-6">
+            <div class="row p-2">
+                <div class="col-12 p-1" style="border : 1px solid #008cba; border-radius: 5px">
+                    <div class="card">
+                        <img src="@item.ImageUrl" class="card-img-top rounded" />
+                        <div class="pl-1">
+                            <p class="card-title h5 text-primary">@item.Title</p>
+                            <p class="card-title h5 text-secondary">by @item.Author</p>
+                        </div>
+                        <div class="pl-1">
+                            <p>List Price : <b>$@item.Price.ToString("0.00")</b></p>
+                        </div>
+                        <div class="pl-1">
+                            <a class="btn btn-primary" asp-action="ProductDetails" asp-controller="Home" asp-area="Customer" asp-route-productID="@item.ProductID">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Abstract
 {
-    public interface IGenericRepositoryDal<TEntity> where TEntity : class
+    public interface IGenericRepositoryDal<TEntity> where TEntity : class,new()
     {
         void Add(TEntity Entity);
         void Delete(TEntity Entity);
         void Update(TEntity Entity);
-
+        void DeleteRange(IEnumerable<TEntity> EntityList);
         TEntity GetByID(Expression<Func<TEntity, bool>> filter);
-        IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>> filter=null);
+        IEnumerable<TEntity> GetAll(Expression<Func<TEntity, bool>> filter=null);
+       
     }
 }

@@ -10,3 +10,15 @@ C:\Users\hhasa\Desktop\E-Ticaret\BulkyBook\EntityLayer\obj\Debug\net6.0\EntityLa
 C:\Users\hhasa\Desktop\E-Ticaret\BulkyBook\EntityLayer\obj\Debug\net6.0\refint\EntityLayer.dll
 C:\Users\hhasa\Desktop\E-Ticaret\BulkyBook\EntityLayer\obj\Debug\net6.0\EntityLayer.pdb
 C:\Users\hhasa\Desktop\E-Ticaret\BulkyBook\EntityLayer\obj\Debug\net6.0\ref\EntityLayer.dll
+C:\Users\hhasa\source\repos\BulkyBook\EntityLayer\bin\Debug\net6.0\EntityLayer.deps.json
+C:\Users\hhasa\source\repos\BulkyBook\EntityLayer\bin\Debug\net6.0\EntityLayer.dll
+C:\Users\hhasa\source\repos\BulkyBook\EntityLayer\bin\Debug\net6.0\EntityLayer.pdb
+C:\Users\hhasa\source\repos\BulkyBook\EntityLayer\obj\Debug\net6.0\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\hhasa\source\repos\BulkyBook\EntityLayer\obj\Debug\net6.0\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hhasa\source\repos\BulkyBook\EntityLayer\obj\Debug\net6.0\EntityLayer.AssemblyInfoInputs.cache
+C:\Users\hhasa\source\repos\BulkyBook\EntityLayer\obj\Debug\net6.0\EntityLayer.AssemblyInfo.cs
+C:\Users\hhasa\source\repos\BulkyBook\EntityLayer\obj\Debug\net6.0\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\hhasa\source\repos\BulkyBook\EntityLayer\obj\Debug\net6.0\EntityLayer.dll
+C:\Users\hhasa\source\repos\BulkyBook\EntityLayer\obj\Debug\net6.0\refint\EntityLayer.dll
+C:\Users\hhasa\source\repos\BulkyBook\EntityLayer\obj\Debug\net6.0\EntityLayer.pdb
+C:\Users\hhasa\source\repos\BulkyBook\EntityLayer\obj\Debug\net6.0\ref\EntityLayer.dll

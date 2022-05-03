@@ -32,7 +32,7 @@ namespace BusinessLayer.Concrete
             _categoryDal.Update(category);
         }
 
-        public IQueryable<Category> GetAllCategory()
+        public IEnumerable<Category> GetAllCategory()
         {
             return _categoryDal.GetAll();
         }
@@ -41,6 +41,6 @@ namespace BusinessLayer.Concrete
         {
             return _categoryDal.GetByID(x => x.CategoryID==id);
         }
-       
+
     }
 }
