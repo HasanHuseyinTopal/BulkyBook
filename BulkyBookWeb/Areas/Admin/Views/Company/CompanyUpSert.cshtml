@@ -1,0 +1,59 @@
+﻿@model EntityLayer.Concrete.Company
+
+@{
+    ViewData["Title"] = "CompanyUpSert";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<form asp-controller="Company" asp-action="CompanyUpSert" enctype="multipart/form-data">
+  <div class="row">
+       <div class="col-10">
+        <div class="border row p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">@(Model.CompanyID!=0?"Update Company":"Create Company")</h2>
+            <hr />
+        </div>
+        <input type="hidden" asp-for="CompanyID" />
+        <div class=" mb-3">
+            <label asp-for="CompanyName">Company Name</label>
+            <input asp-for="CompanyName" class="form-control" placeholder="Name" autocomplete="off" />
+            <span asp-validation-for="CompanyName" class="text-danger"></span>
+        </div>
+        <div class=" mb-3">
+            <label asp-for="StreetAdress">Street Adress</label>
+            <textarea asp-for="StreetAdress" class="form-control" rows="3" placeholder="StreetAdress" autocomplete="off"></textarea>
+            <span asp-validation-for="StreetAdress" class="text-danger"></span>
+        </div>
+        <div class=" mb-3 col-6">
+            <label asp-for="City">City</label>
+            <input asp-for="City" class="form-control" placeholder="City" autocomplete="off" />
+            <span asp-validation-for="City" class="text-danger"></span>
+        </div>
+        <div class=" mb-3 col-6">
+            <label asp-for="State">State</label>
+            <input asp-for="State" class="form-control" placeholder="State" autocomplete="off" />
+            <span asp-validation-for="State" class="text-danger"></span>
+        </div>
+        <div class=" mb-3 col-6">
+            <label asp-for="PostalCode">PostalCode</label>
+            <input asp-for="PostalCode" class="form-control" placeholder="PostalCode" autocomplete="off" />
+            <span asp-validation-for="PostalCode" class="text-danger"></span>
+        </div>
+         <div class=" mb-3 col-6">
+            <label asp-for="PhoneNumber">Phone Number</label>
+            <input asp-for="PhoneNumber" class="form-control" placeholder="Phone Number" autocomplete="off" />
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+        <div class="col p-3">
+            <button class="btn btn-primary" type="submit">Submit</button>
+            <a class="btn btn-secondary" href="/Admin/Product/GetAllProducts">Back To List</a>
+        </div>
+    </div>
+   </div>
+  </div>
+</form>
+
+@section scripts{
+    @{
+    <partial name="_ValidationScriptsPartial" />
+    }
+}

@@ -37,7 +37,7 @@ namespace DataAccessLayer.Concrete
             IQueryable<TEntity> query = dbSet;
             return query.FirstOrDefault(filter);
         }
-        public IEnumerable<TEntity> GetAll(Expression<Func<TEntity, bool>> filter = null)
+        public IEnumerable<TEntity> GetAll(Expression<Func<TEntity, bool>>? filter = null)
         {
             if (filter == null)
             {

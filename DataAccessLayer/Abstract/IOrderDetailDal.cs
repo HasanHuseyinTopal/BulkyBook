@@ -5,11 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityLayer.ViewModels
+namespace DataAccessLayer.Abstract
 {
-    public class ProductDetailsModel
+    public interface IOrderDetailDal : IGenericRepositoryDal<OrderDetail>
     {
-        public Product product { get; set; }
-        public int Count { get; set; }
+        void AddRange(List<OrderDetail> orderDetails);
     }
 }

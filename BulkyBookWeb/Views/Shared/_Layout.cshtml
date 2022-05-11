@@ -30,9 +30,15 @@
                             <a class="dropdown-item" asp-area="Admin" asp-controller="Cover" asp-action="GetAllCovers">Cover Type</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="GetAllProducts">Products</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" asp-area="Admin" asp-controller="Company" asp-action="GetAllCompanies">Companies</a>
                         </div>
                     </li>
-                </ul>
+                    <li class="nav-item">
+                       <a class="nav-link" asp-area="Customer" asp-controller="Cart" asp-action="Index"><i class="bi bi-cart4"></i>
+</a>
+                    </li>
+                </ul> 
                 <partial name="_LoginPartial"></partial>
                 @*<form class="d-flex">
                     <input class="form-control me-sm-2" type="text" placeholder="Search">

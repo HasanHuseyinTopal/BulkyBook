@@ -1,11 +1,11 @@
-﻿@model EntityLayer.ViewModels.ProductDetailsModel
+﻿@model EntityLayer.Concrete.ShoppingCart
 @{
     ViewData["Title"] = "ProductDetails";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<form method="post">
-    <input hidden asp-for="product.ProductID" />
+<form  method="post">
+    <input type="hidden" asp-for="product.ProductID" />
     <div class="card  container pt-4">
         <div class="card-header bg-primary text-light ml-0  row ">
             <div class="col-12 col-md-6">
